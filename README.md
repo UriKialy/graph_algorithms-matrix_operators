@@ -1,5 +1,3 @@
-Got it! Here's a refined version of the README with those adjustments:
-
 ---
 
 # Graph Algorithms & Operators in C++

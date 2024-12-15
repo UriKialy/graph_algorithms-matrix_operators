@@ -363,19 +363,19 @@ namespace ariel
         vector<vector<int>> GraphMat = graph.getAdjacencyMatrix();
         size_t vertixNum=graph.getNumVertices();
         // small check if the graph deosnt have negative edges
-        bool isnegativeEdges = true;
+        bool isnegativeEdges = false;
         for (size_t i = 0; i < GraphMat.size(); i++)
         {
             for (size_t j = 0; j < GraphMat.size(); j++)
             {
                 if (GraphMat[i][j] < 0)
                 {
-                    isnegativeEdges = false;
+                    isnegativeEdges = true;
                     break;
                 }
             }
         }
-        if (isnegativeEdges)
+        if (!isnegativeEdges)
         {
             return "No negative cycle found";
         }
